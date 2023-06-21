@@ -11,27 +11,22 @@ class uasController extends Controller
 
         $time = date('H:i:s');
 
-        if($time >='03:00' && $time <= '09:59'){
+        if($time >='03:00' && $time < '10:00'){
             $echo = 'Selamat Pagi';
-            return view('uas5',['echo'=>$echo]);
         }
-
-        else if($time >='10:00' && $time <= '14:59'){
+        else if($time >='10:00' && $time < '15:00'){
             $echo = 'Selamat Siang';
-            return view('uas5',['echo'=>$echo]);
         }
 
-        else if($time >='15:00' && $time <= '17:59'){
+        else if($time >='15:00' && $time < '18:00'){
             $echo = 'Selamat Sore';
-            return view('uas5',['echo'=>$echo]);
         }
-        else if($time >='18:00' && $time <= '18:59'){
+        else if($time >='18:00' && $time < '19:00'){
             $echo = 'Selamat Petang';
-            return view('uas5',['echo'=>$echo]);
         }
         else{
             $echo = 'Selamat malam';
-            return view('uas5',['echo'=>$echo]);
         }
+        return view('uas5',['echo'=>$echo]);
     }
 }
